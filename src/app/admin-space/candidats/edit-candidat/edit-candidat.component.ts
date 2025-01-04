@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Candidat } from '../../../model/candidat';
 import { CandidatService } from '../../../services/candidat.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-candidat-edit',

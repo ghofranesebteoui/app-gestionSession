@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app.component';  // Le composant principal de votre application
-
+import { AppComponent } from './app.component';  
+import { NavbarComponent } from '../app/shared/navbar/navbar.component'; 
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,  
+    NavbarComponent, 
   ],
   imports: [
-    BrowserModule,  
+    BrowserModule, 
+    RouterModule 
   ],
   providers: [],
   bootstrap: [AppComponent],  

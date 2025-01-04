@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { AcceuilComponent } from './acceuil/acceuil.component';
-import { NavbarComponent } from './../shared/navbar/navbar.component'; 
 import { DetailsComponent } from './details/details.component';
 import { RechercheComponent } from './recherche/recherche.component';
 
@@ -12,7 +11,7 @@ import { RechercheComponent } from './recherche/recherche.component';
   declarations: [
     AcceuilComponent,
     DetailsComponent,
-    NavbarComponent,  
+      
     RechercheComponent
   ],
   imports: [
@@ -21,7 +20,7 @@ import { RechercheComponent } from './recherche/recherche.component';
     RouterModule
   ],
   exports: [
-    NavbarComponent, 
+     
     AcceuilComponent,
     DetailsComponent,
     RechercheComponent
