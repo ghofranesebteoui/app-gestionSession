@@ -1,0 +1,16 @@
+<h2>{{ formation.titre }}</h2>
+<p>{{ formation.desc }}</p>
+<p>Charge horaire: {{ formation.chargeHoraire }} heures</p>
+
+<h3>Sessions disponibles</h3>
+<ul>
+  <li *ngFor="let session of sessions">
+    {{ session.dateDeb | date }} - {{ session.dateFin | date }}
+    <button
+      (click)="inscrire(session)"
+      [disabled]="session.candidats.length >= 15"
+    >
+      S'inscrire
+    </button>
+  </li>
+</ul>

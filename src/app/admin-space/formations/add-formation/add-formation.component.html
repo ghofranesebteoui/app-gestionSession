@@ -1,0 +1,69 @@
+<h2>Ajout d'une nouvelle formation :</h2>
+<form id="addForm" (ngSubmit)="addFormation(f)" #f="ngForm">
+  <div class="mb-3">
+    <label for="title" class="form-label">Titre*</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      name="title"
+      ngModel
+      #title="ngModel"
+      required
+    />
+    <span *ngIf="title.invalid && title.touched" class="error"
+      >Ce champ est obligatoire!</span
+    >
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Description*</label>
+    <textarea
+      class="form-control"
+      id="description"
+      name="description"
+      ngModel
+      #description="ngModel"
+      required
+    ></textarea>
+    <span *ngIf="description.invalid && description.touched" class="error"
+      >Ce champ est obligatoire!</span
+    >
+  </div>
+  <div class="mb-3">
+    <label for="duration" class="form-label">Durée (heures)*</label>
+    <input
+      type="number"
+      class="form-control"
+      id="duration"
+      name="duration"
+      ngModel
+      #duration="ngModel"
+      required
+    />
+    <span *ngIf="duration.invalid && duration.touched" class="error"
+      >Ce champ est obligatoire!</span
+    >
+  </div>
+  <div class="mb-3">
+    <label for="difficulty" class="form-label">Niveau de difficulté*</label>
+    <select
+      class="form-control"
+      id="difficulty"
+      name="difficulty"
+      ngModel
+      #difficulty="ngModel"
+      required
+    >
+      <option value="beginner">Débutant</option>
+      <option value="intermediate">Intermédiaire</option>
+      <option value="advanced">Avancé</option>
+    </select>
+    <span *ngIf="difficulty.invalid && difficulty.touched" class="error"
+      >Ce champ est obligatoire!</span
+    >
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="f.invalid">
+    Valider
+  </button>
+  <div>* : champ obligatoire</div>
+</form>

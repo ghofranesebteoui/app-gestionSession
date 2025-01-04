@@ -1,0 +1,83 @@
+<h2>Ajout d'un nouveau formateur :</h2>
+
+<form id="addForm" (ngSubmit)="addFormateur(f)" #f="ngForm">
+  <!-- Champ Prénom -->
+  <div class="mb-3">
+    <label for="prenom" class="form-label">Prénom*</label>
+    <input
+      type="text"
+      class="form-control"
+      id="prenom"
+      name="_prenom"
+      ngModel
+      #prenom="ngModel"
+      required
+    />
+    <span *ngIf="prenom.invalid && prenom.touched" class="error"
+      >Ce champ est obligatoire!</span
+    >
+  </div>
+
+  <!-- Champ Nom -->
+  <div class="mb-3">
+    <label for="nom" class="form-label">Nom*</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nom"
+      name="_nom"
+      ngModel
+      #nom="ngModel"
+      required
+    />
+    <span *ngIf="nom.invalid && nom.touched" class="error"
+      >Ce champ est obligatoire!</span
+    >
+  </div>
+
+  <!-- Champ Email -->
+  <div class="mb-3">
+    <label for="email" class="form-label">Email*</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="_email"
+      ngModel
+      #email="ngModel"
+      required
+    />
+    <span *ngIf="email.invalid && email.touched" class="error"
+      >Ce champ est obligatoire!</span
+    >
+  </div>
+
+  <!-- Champ Téléphone -->
+  <div class="mb-3">
+    <label for="tel" class="form-label">Numéro de téléphone*</label>
+    <input
+      type="tel"
+      class="form-control"
+      id="tel"
+      name="_tel"
+      ngModel
+      #tel="ngModel"
+      required
+    />
+    <span *ngIf="tel.invalid && tel.touched" class="error"
+      >Ce champ est obligatoire!</span
+    >
+  </div>
+
+  <!-- Bouton de validation -->
+  <button
+    type="submit"
+    id="btnValidAdd"
+    class="btn btn-primary"
+    [disabled]="f.invalid"
+  >
+    Valider
+  </button>
+
+  <div>* : champ obligatoire</div>
+</form>

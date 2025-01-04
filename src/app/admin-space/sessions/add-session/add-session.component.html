@@ -1,0 +1,55 @@
+<h2>Ajout d'une nouvelle session de formation :</h2>
+<form id="addForm" (ngSubmit)="addSession(f)" #f="ngForm">
+  <div class="mb-3">
+    <label for="startDate" class="form-label">Date de début*</label>
+    <input
+      type="date"
+      class="form-control"
+      id="startDate"
+      name="startDate"
+      ngModel
+      #startDate="ngModel"
+      required
+    />
+    <span *ngIf="startDate.invalid && startDate.touched" class="error"
+      >Ce champ est obligatoire!</span
+    >
+  </div>
+  <div class="mb-3">
+    <label for="endDate" class="form-label">Date de fin*</label>
+    <input
+      type="date"
+      class="form-control"
+      id="endDate"
+      name="endDate"
+      ngModel
+      #endDate="ngModel"
+      required
+    />
+    <span *ngIf="endDate.invalid && endDate.touched" class="error"
+      >Ce champ est obligatoire!</span
+    >
+  </div>
+  <div class="mb-3">
+    <label for="formation" class="form-label">Formation*</label>
+    <select
+      class="form-control"
+      id="formation"
+      name="formation"
+      ngModel
+      #formation="ngModel"
+      required
+    >
+      <!-- Liste des formations disponibles -->
+      <option value="1">Formation 1</option>
+      <option value="2">Formation 2</option>
+    </select>
+    <span *ngIf="formation.invalid && formation.touched" class="error"
+      >Ce champ est obligatoire!</span
+    >
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="f.invalid">
+    Valider
+  </button>
+  <div>* : champ obligatoire</div>
+</form>

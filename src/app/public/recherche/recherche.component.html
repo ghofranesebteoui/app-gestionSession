@@ -1,0 +1,14 @@
+<input
+  type="text"
+  [(ngModel)]="searchQuery"
+  placeholder="Rechercher une formation"
+/>
+<button (click)="searchFormations()">Rechercher</button>
+
+<ul>
+  <li *ngFor="let formation of formations">
+    <a [routerLink]="['/public/details', formation.id]">{{
+      formation.titre
+    }}</a>
+  </li>
+</ul>

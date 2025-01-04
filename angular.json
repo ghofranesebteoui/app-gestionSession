@@ -100,12 +100,17 @@
               }
             ],
             "styles": [
-              "src/styles.css"
-            ],
+  "src/styles.css",
+  "node_modules/bootstrap/dist/css/bootstrap.min.css"
+],
+            
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "05ac3bdc-e37a-4df6-9a4e-328783ad6a78"
   }
 }

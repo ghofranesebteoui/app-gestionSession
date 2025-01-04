@@ -1,0 +1,65 @@
+<form id="editForm" (ngSubmit)="editCandidat(f)" #f="ngForm">
+  <div class="mb-3">
+    <label for="nom" class="form-label">Nom*</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nom"
+      name="nom"
+      ngModel
+      [(ngModel)]="candidat.nom"
+      required
+    />
+    <span
+      *ngIf="f.controls.nom?.invalid && f.controls.nom?.touched"
+      class="error"
+    >
+      Ce champ est obligatoire!
+    </span>
+  </div>
+
+  <div class="mb-3">
+    <label for="prenom" class="form-label">Prénom*</label>
+    <input
+      type="text"
+      class="form-control"
+      id="prenom"
+      name="prenom"
+      ngModel
+      [(ngModel)]="candidat.prenom"
+      required
+    />
+    <span
+      *ngIf="f.controls.prenom?.invalid && f.controls.prenom?.touched"
+      class="error"
+    >
+      Ce champ est obligatoire!
+    </span>
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email*</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      ngModel
+      [(ngModel)]="candidat.email"
+      required
+    />
+    <span
+      *ngIf="f.controls.email?.invalid && f.controls.email?.touched"
+      class="error"
+    >
+      Ce champ est obligatoire!
+    </span>
+  </div>
+
+  <!-- Ajouter d'autres champs pour numCIN, photo, mdp -->
+
+  <button type="submit" class="btn btn-primary" [disabled]="f.invalid">
+    Valider
+  </button>
+  <div>* : champ obligatoire</div>
+</form>

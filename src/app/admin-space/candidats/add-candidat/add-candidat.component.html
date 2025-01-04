@@ -1,0 +1,31 @@
+<div class="mb-3">
+  <label for="numCIN" class="form-label">Numéro de carte d'identité*</label>
+  <input
+    type="text"
+    class="form-control"
+    id="numCIN"
+    name="numCIN"
+    ngModel
+    #numCIN="ngModel"
+    required
+  />
+  <span *ngIf="numCIN.invalid && numCIN.touched" class="error"
+    >Ce champ est obligatoire!</span
+  >
+</div>
+
+<div class="mb-3">
+  <label for="photo" class="form-label">Photo*</label>
+  <input
+    type="file"
+    class="form-control"
+    id="photo"
+    name="photo"
+    ngModel
+    #photo="ngModel"
+    required
+  />
+  <span *ngIf="photo.invalid && photo.touched" class="error"
+    >Ce champ est obligatoire!</span
+  >
+</div>
