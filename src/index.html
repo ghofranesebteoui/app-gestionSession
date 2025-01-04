@@ -1,13 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
-    <meta charset="utf-8" />
-    <title>Application De Gestion des Sessions De Formation</title>
-    <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Gestion des Sessions de Formation - ISET</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- Style global -->
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f5f5f5; /* Fond gris clair */
+        color: #333; /* Texte gris foncé */
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #007bff; /* Couleur primaire Bootstrap */
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        font-weight: 600;
+      }
+      footer {
+        background-color: #343a40; /* Thème sombre */
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+      footer a {
+        color: #ffc107; /* Couleur jaune Bootstrap */
+        text-decoration: none;
+      }
+      footer a:hover {
+        text-decoration: underline;
+      }
+      .container-fluid {
+        margin-top: 2rem;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        border: none;
+      }
+      .btn-primary:hover {
+        background-color: #0056b3;
+      }
+    </style>
   </head>
   <body>
     <app-root></app-root>
+    <header>
+      <h1>Bienvenue sur la Gestion des Formations de l'ISET</h1>
+      <p>
+        Gérez facilement les candidats, formateurs et sessions de formation.
+      </p>
+    </header>
+
+    <div class="container-fluid text-center">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Espace Public</h5>
+              <p class="card-text">
+                Découvrez les formations disponibles et inscrivez-vous aux
+                sessions à venir.
+              </p>
+              <a href="/public/acceuil" class="btn btn-primary"
+                ><i class="fas fa-users"></i> Accéder à l'Espace Public</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Espace Administrateur</h5>
+              <p class="card-text">
+                Gérez les formateurs, candidats et sessions planifiées.
+              </p>
+              <a href="/admin-space" class="btn btn-primary"
+                ><i class="fas fa-cogs"></i> Accéder à l'Espace
+                Administrateur</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Nous Contacter</h5>
+              <p class="card-text">
+                Vous avez des questions ? Contactez notre équipe d’assistance.
+              </p>
+              <a href="#contact" class="btn btn-primary"
+                ><i class="fas fa-envelope"></i> Nous Contacter</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        &copy; 2025 Gestion des Formations de l'ISET. Conçu avec ❤️ par SEBTEOUI
+        GHOFRANE.
+      </p>
+      <p>
+        <a href="/public/acceuil">Accueil</a> |
+        <a href="/public/recherche">Rechercher</a> |
+        <a href="/admin-space">Espace Admin</a>
+      </p>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

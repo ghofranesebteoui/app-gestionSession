@@ -8,6 +8,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './recherche.component.css'
 })
 export class RechercheComponent {
+searchQuery: any;
+searchFormations() {
+throw new Error('Method not implemented.');
+}
   formations: Formation[] = [
     new Formation(1, 'Angular', 'Formation Angular', 40, '', 'débutant', ['Web'], ['Angular', 'Web']),
     new Formation(2, 'Python', 'Formation Python', 30, '', 'intermédiaire', ['Data'], ['Python', 'Data'])
